@@ -10,7 +10,7 @@ Read the [license](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) yours
 
 ### The "First" Edition
 
-[pc1]: https://leanpub.com/react-cookbook
+[pc1]: https://leanpub.com/reactcookbook
 
 ## q & a
 
@@ -20,7 +20,7 @@ Yes, you can use the markdown source in this repository to make your own PDF. Or
 
 ### Great book! Can I still buy it?
 
-Not from me! Instead, [please fix a price](https://leanpub.com/react-cookbook).
+Not from me! Instead, [please fix a price](https://leanpub.com/reactcookbook).
 
 ### I don't want to buy it, but I'd like to say "thank you" with a tip.
 
