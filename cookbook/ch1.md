@@ -193,8 +193,9 @@ const testFunction = () => {
 
 If you’re an experienced JS developer, moving from the regular function syntax to arrow syntax might be uncomfortable at first. When I was learning about arrow function, I used this simple 2 steps to rewrite my functions:
 
-remove function keyword
-add the fat arrow symbol => after ()
+- remove function keyword
+- add the fat arrow symbol => after ()
+
 the parentheses are still used for passing parameters, and if you only have one parameter, you can omit the parentheses.
 
 ```
