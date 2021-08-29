@@ -1,4 +1,7 @@
-# JavaScript Basics Before You Learn React (source https://morioh.com/p/fb839c7da909)
+# JavaScript Basics Before You Learn React 
+
+(source https://morioh.com/p/fb839c7da909)
+
 If you already have some experience with JavaScript, all you need to learn before React is just the JavaScript features you will actually use to develop React application. Things about JavaScript you should be comfortable with before learning React are:
 
 ES6 classes
