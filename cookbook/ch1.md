@@ -98,26 +98,20 @@ nathan.installReact(); // installing React .. Done.
 
 The class that extends another class is usually called child class or sub class, and the class that is being extended is called parent class or super class. A child class can also override the methods defined in parent class, meaning it will replace the method definition with the new method defined. For example, let’s override the hello function:
 
+```
 class ReactDeveloper extends Developer {
+  installReact(){
+    return 'installing React .. Done.';
+  }
 
-installReact(){
-
-return ‘installing React … Done.’;
-
+  hello(){
+    return 'Hello World! I am ' + this.name + ' and I am a REACT developer';
+  }
 }
 
-hello(){
-
-return ‘Hello World! I am ’ + this.name + ’ and I am a REACT developer’;
-
-}
-
-}
-
-
-var nathan = new ReactDeveloper(‘Nathan’);
-
+var nathan = new ReactDeveloper('Nathan');
 nathan.hello(); // Hello World! I am Nathan and I am a REACT developer
+```
 
 
 There you go. The hello method from Developer class has been overridden.
@@ -127,23 +121,18 @@ There you go. The hello method from Developer class has been overridden.
 ## Use in React
 Now that we understand ES6 class and inheritance, we can understand the React class defined in src/app.js. This is a React component, but it’s actually just a normal ES6 class which inherits the definition of React Component class, which is imported from the React package.
 
-import React, { Component } from ‘react’;
+```
+import React, { Component } from 'react';
 
 class App extends Component {
-
-// class content
-
-render(){
-
-return (
-
-<h1>Hello React!</h1>
-
-)
-
+  // class content
+  render(){
+    return (
+      <h1>Hello React!</h1>
+    )
+  }
 }
-
-}
+```
 
 
 This is what enables us to use the render() method, JSX, this.state, other methods. All of this definitions are inside the Component class. But as we will see later, class is not the only way to define React Component. If you don’t need state and other lifecycle methods, you can use a function instead.
@@ -153,11 +142,11 @@ This is what enables us to use the render() method, JSX, this.state, other metho
 Declaring variables with ES6 let and const
 Because JavaScript var keyword declares variable globally, two new variable declarations were introduced in ES6 to solve the issue, namely let and const. They are all the same, in which they are used to declare variables. The difference is that const cannot change its value after declaration, while let can. Both declarations are local, meaning if you declare let inside a function scope, you can’t call it outside of the function.
 
-const name = “David”;
-
+```
+const name = "David";
 let age = 28;
-
-var occupation = “Software Engineer”;
+var occupation = "Software Engineer";
+```
 
 ## Which one to use?
 The rule of thumb is that declare variable using const by default. Later when you wrote the application, you’ll realize that the value of const need to change. That’s the time you should refactor const into let. Hopefully it will make you get used to the new keywords, and you’ll start to recognize the pattern in your application where you need to use const or let.
@@ -167,25 +156,19 @@ The rule of thumb is that declare variable using const by default. Later when yo
 ## When do we use it in React?
 Everytime we need variables. Consider the following example:
 
-import React, { Component } from ‘react’;
+```
+import React, { Component } from 'react';
 
 class App extends Component {
-
-// class content
-
-render(){
-
-const greeting = ‘Welcome to React’;
-
-return (
-
-<h1>{greeting}</h1>
-
-)
-
+  // class content
+  render(){
+    const greeting = 'Welcome to React';
+    return (
+      <h1>{greeting}</h1>
+    )
+  }
 }
-
-}
+```
 
 
 Since greeting won’t change in the entire application lifecycle, we define it using const here.
@@ -195,21 +178,17 @@ Since greeting won’t change in the entire application lifecycle, we define it 
 ## The arrow function
 Arrow function is a new ES6 feature that’s been used almost widely in modern codebases because it keeps the code concise and readable. This feature allows us to write functions using shorter syntax
 
+```
 // regular function
-
 const testFunction = function() {
-
-// content…
-
+  // content..
 }
 
 // arrow function
-
 const testFunction = () => {
-
-// content…
-
+  // content..
 }
+```
 
 
 If you’re an experienced JS developer, moving from the regular function syntax to arrow syntax might be uncomfortable at first. When I was learning about arrow function, I used this simple 2 steps to rewrite my functions:
@@ -218,50 +197,45 @@ remove function keyword
 add the fat arrow symbol => after ()
 the parentheses are still used for passing parameters, and if you only have one parameter, you can omit the parentheses.
 
+```
 const testFunction = (firstName, lastName) => {
-
-return firstName+’ '+lastName;
-
+  return firstName+' '+lastName;
 }
 
 const singleParam = firstName => {
-
-return firstName;
-
+  return firstName;
 }
+```
 
 
 ## Implicit return
 If your arrow function is only one line, you can return values without having to use the return keyword and the curly brackets {}
 
-const testFunction = () => ‘hello there.’;
-
-testFunction();
+```
+const testFunction = () => 'hello there.';
+testFunction(); 
+```
 
 ## Use in React
 Another way to create React component is to use arrow function. React take arrow function:
 
+```
 const HelloWorld = (props) => {
-
-return <h1>{props.hello}</h1>;
-
+  return <h1>{props.hello}</h1>;
 }
+```
 
 as equivalent to an ES6 class component
 
+```
 class HelloWorld extends Component {
-
-render() {
-
-return (
-
-<h1>{props.hello}</h1>;
-
-);
-
+  render() {
+    return (
+      <h1>{props.hello}</h1>;
+    );
+  }
 }
-
-}
+```
 
 Using arrow function in your React application makes the code more concise. But it will also remove the use of state from your component. This type of component is known as stateless functional component. You’ll find that name in many React tutorials.
 
@@ -270,69 +244,66 @@ Using arrow function in your React application makes the code more concise. But 
 ## Destructuring assignment for arrays and objects
 One of the most useful new syntax introduced in ES6, destructuring assignment is simply copying a part of object or array and put them into named variables. A quick example:
 
+```
 const developer = {
-
-firstName: ‘Nathan’,
-
-lastName: ‘Sebhastian’,
-
-developer: true,
-
-age: 25,
-
+  firstName: 'Nathan',
+  lastName: 'Sebhastian',
+  developer: true,
+  age: 25,
 }
 
 //destructure developer object
-
 const { firstName, lastName } = developer;
-
-console.log(firstName); // returns ‘Nathan’
-
-console.log(lastName); // returns ‘Sebhastian’
-
+console.log(firstName); // returns 'Nathan'
+console.log(lastName); // returns 'Sebhastian'
 console.log(developer); // returns the object
+```
 
 
 As you can see, we assigned firstName and lastName from developer object into new variable firstName and lastName. Now what if you want to put firstName into a new variable called name?
 
+```
 const { firstName:name } = developer;
-
-console.log(name); // returns ‘Nathan’
+console.log(name); // returns 'Nathan'
+```
 
 Destructuring also works on arrays, only it uses index instead of object keys:
 
+```
 const numbers = [1,2,3,4,5];
-
 const [one, two] = numbers; // one = 1, two = 2
+```
 
 You can skip some index from destructuring by passing it with ,:
 
+```
 const [one, two, , four] = numbers; // one = 1, two = 2, four = 4
+```
 
 ## Use in React
 Mostly used in destructuring state in methods, for example:
 
+```
 reactFunction = () => {
-
-const { name, email } = this.state;
-
+  const { name, email } = this.state;
 };
+```
 
 Or in functional stateless component, consider the example from previous chapter:
 
+```
 const HelloWorld = (props) => {
-
-return <h1>{props.hello}</h1>;
-
+  return <h1>{props.hello}</h1>;
 }
+```
 
 We can simply destructure the parameter immediately:
 
+```
 const HelloWorld = ({ hello }) => {
-
-return <h1>{hello}</h1>;
-
+  return <h1>{hello}</h1>;
 }
+```
 
 ## Map and filter
 Although this tutorial focuses on ES6, JavaScript array map and filter methods need to be mentioned since they are probably one of the most used ES5 features when building React application. Particularly on processing data.
