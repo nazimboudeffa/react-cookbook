@@ -10,6 +10,7 @@ If you already have some experience with JavaScript, all you need to learn befor
 - Destructuring assignment
 - Map and filter
 - ES6 module system
+
 It’s the 20% of JavaScript features that you will use 80% of the time, so in this tutorial I will help you learn them all.
 
 
