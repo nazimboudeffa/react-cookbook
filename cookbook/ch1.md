@@ -4,12 +4,12 @@
 
 If you already have some experience with JavaScript, all you need to learn before React is just the JavaScript features you will actually use to develop React application. Things about JavaScript you should be comfortable with before learning React are:
 
-ES6 classes
-The new variable declaration let/const
-Arrow functions
-Destructuring assignment
-Map and filter
-ES6 module system
+- ES6 classes
+- The new variable declaration let/const
+- Arrow functions
+- Destructuring assignment
+- Map and filter
+- ES6 module system
 It’s the 20% of JavaScript features that you will use 80% of the time, so in this tutorial I will help you learn them all.
 
 
