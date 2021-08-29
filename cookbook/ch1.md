@@ -83,21 +83,17 @@ A class can define as many methods as the requirements needed, and in this case,
 ## Class inheritance
 A class can extends the definition of another class, and a new object initialized from that class will have all the methods of both classes.
 
+```
 class ReactDeveloper extends Developer {
-
-installReact(){
-
-return ‘installing React … Done.’;
-
+  installReact(){
+    return 'installing React .. Done.';
+  }
 }
 
-}
-
-var nathan = new ReactDeveloper(‘Nathan’);
-
+var nathan = new ReactDeveloper('Nathan');
 nathan.hello(); // Hello World! I am Nathan and I am a web developer
-
-nathan.installReact(); // installing React … Done.
+nathan.installReact(); // installing React .. Done.
+```
 
 
 The class that extends another class is usually called child class or sub class, and the class that is being extended is called parent class or super class. A child class can also override the methods defined in parent class, meaning it will replace the method definition with the new method defined. For example, let’s override the hello function:
