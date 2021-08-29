@@ -1,4 +1,4 @@
-JavaScript Basics Before You Learn React (source https://morioh.com/p/fb839c7da909)
+# JavaScript Basics Before You Learn React (source https://morioh.com/p/fb839c7da909)
 If you already have some experience with JavaScript, all you need to learn before React is just the JavaScript features you will actually use to develop React application. Things about JavaScript you should be comfortable with before learning React are:
 
 ES6 classes
@@ -11,7 +11,7 @@ It’s the 20% of JavaScript features that you will use 80% of the time, so in t
 
 
 
-Exploring Create React App
+## Exploring Create React App
 The usual case of starting to learn React is to run the create-react-app package, which sets up everything you need to run React. Then after the process is finished, opening src/app.js will present us with the only React class in the whole app:
 
 import React, { Component } from 'react';
@@ -69,7 +69,7 @@ If you never learned ES6 before, you’d think that this class statement is a fe
 
 
 
-ES6 Classes
+## ES6 Classes
 ES6 introduced class syntax that is used in similar ways to OO language like Java or Python. A basic class in ES6 would look like this:
 
 class Developer {
@@ -99,7 +99,7 @@ A class can define as many methods as the requirements needed, and in this case,
 
 
 
-Class inheritance
+## Class inheritance
 A class can extends the definition of another class, and a new object initialized from that class will have all the methods of both classes.
 
 class ReactDeveloper extends Developer {
@@ -147,7 +147,7 @@ There you go. The hello method from Developer class has been overridden.
 
 
 
-Use in React
+## Use in React
 Now that we understand ES6 class and inheritance, we can understand the React class defined in src/app.js. This is a React component, but it’s actually just a normal ES6 class which inherits the definition of React Component class, which is imported from the React package.
 
 import React, { Component } from ‘react’;
@@ -182,12 +182,12 @@ let age = 28;
 
 var occupation = “Software Engineer”;
 
-Which one to use?
+## Which one to use?
 The rule of thumb is that declare variable using const by default. Later when you wrote the application, you’ll realize that the value of const need to change. That’s the time you should refactor const into let. Hopefully it will make you get used to the new keywords, and you’ll start to recognize the pattern in your application where you need to use const or let.
 
 
 
-When do we use it in React?
+## When do we use it in React?
 Everytime we need variables. Consider the following example:
 
 import React, { Component } from ‘react’;
@@ -215,7 +215,7 @@ Since greeting won’t change in the entire application lifecycle, we define it 
 
 
 
-The arrow function
+## The arrow function
 Arrow function is a new ES6 feature that’s been used almost widely in modern codebases because it keeps the code concise and readable. This feature allows us to write functions using shorter syntax
 
 // regular function
@@ -254,14 +254,14 @@ return firstName;
 }
 
 
-Implicit return
+## Implicit return
 If your arrow function is only one line, you can return values without having to use the return keyword and the curly brackets {}
 
 const testFunction = () => ‘hello there.’;
 
 testFunction();
 
-Use in React
+## Use in React
 Another way to create React component is to use arrow function. React take arrow function:
 
 const HelloWorld = (props) => {
@@ -290,7 +290,7 @@ Using arrow function in your React application makes the code more concise. But 
 
 
 
-Destructuring assignment for arrays and objects
+## Destructuring assignment for arrays and objects
 One of the most useful new syntax introduced in ES6, destructuring assignment is simply copying a part of object or array and put them into named variables. A quick example:
 
 const developer = {
@@ -332,7 +332,7 @@ You can skip some index from destructuring by passing it with ,:
 
 const [one, two, , four] = numbers; // one = 1, two = 2, four = 4
 
-Use in React
+## Use in React
 Mostly used in destructuring state in methods, for example:
 
 reactFunction = () => {
@@ -357,7 +357,7 @@ return <h1>{hello}</h1>;
 
 }
 
-Map and filter
+## Map and filter
 Although this tutorial focuses on ES6, JavaScript array map and filter methods need to be mentioned since they are probably one of the most used ES5 features when building React application. Particularly on processing data.
 
 These two methods are much more used in processing data. For example, imagine a fetch from API result returns an array of JSON data:
@@ -420,7 +420,7 @@ We can also filter the data in the render.
 
 </ul>
 
-ES6 module system
+## ES6 module system
 The ES6 module system enables JavaScript to import and export files. Let’s see the src/app.js code again in order to explain this.
 
 import React, { Component } from ‘react’;
@@ -571,7 +571,7 @@ Will make JavaScript check on node_modules for the corresponding package name. S
 
 
 
-Use in React
+## Use in React
 Obviously we’ve seen this in the src/App.js file, and then in index.js file where the exported App component is being rendered. Let’s ignore the serviceWorker part for now.
 
 //index.js file
@@ -605,5 +605,5 @@ As for PWA, it’s a feature to make React application works offline, but since 
 
 
 
-Conclusion
+## Conclusion
 The great thing about React is that it doesn’t add any foreign abstraction layer on top of JavaScript as other web frameworks. That’s why React becomes very popular with JS developers. It simply uses the best of JavaScript to make building user interfaces easier and maintainable. There really is more of JavaScript than React specifix syntax inside a React application, so once you understand JavaScript better — particularly ES6 — you can write React application with confident. But it doesn’t mean you have to master everything about JavaScript to start writing React app. Go and write one now, and as opportunities come your way, you will be a better developer.
