@@ -310,210 +310,174 @@ Although this tutorial focuses on ES6, JavaScript array map and filter methods n
 
 These two methods are much more used in processing data. For example, imagine a fetch from API result returns an array of JSON data:
 
+```
 const users = [
-
-{ name: ‘Nathan’, age: 25 },
-
-{ name: ‘Jack’, age: 30 },
-
-{ name: ‘Joe’, age: 28 },
-
+  { name: 'Nathan', age: 25 },
+  { name: 'Jack', age: 30 },
+  { name: 'Joe', age: 28 },
 ];
+```
 
 Then we can render a list of items in React as follows:
 
-import React, { Component } from ‘react’;
+```
+import React, { Component } from 'react';
 
 class App extends Component {
+  // class content
+  render(){
+    const users = [
+      { name: 'Nathan', age: 25 },
+      { name: 'Jack', age: 30 },
+      { name: 'Joe', age: 28 },
+    ];
 
-// class content
-
-render(){
-
-const users = [
-
-{ name: ‘Nathan’, age: 25 },
-
-{ name: ‘Jack’, age: 30 },
-
-{ name: ‘Joe’, age: 28 },
-
-];
-
-
-return (
-  &lt;ul&gt;
-    {users
-      .map(user =&gt; &lt;li&gt;{user.name}&lt;/li&gt;)
-    }
-  &lt;/ul&gt;
-)
-
+    return (
+      <ul>
+        {users
+          .map(user => <li>{user.name}</li>)
+        }
+      </ul>
+    )
+  }
 }
-
-}
+```
 
 
 We can also filter the data in the render.
 
+```
 <ul>
-
-{users
-
-.filter(user => user.age > 26)
-
-.map(user => <li>{user.name}</li>)
-
-}
-
+  {users
+    .filter(user => user.age > 26)
+    .map(user => <li>{user.name}</li>)
+  }
 </ul>
+```
 
 ## ES6 module system
 The ES6 module system enables JavaScript to import and export files. Let’s see the src/app.js code again in order to explain this.
 
-import React, { Component } from ‘react’;
-
-import logo from ‘./logo.svg’;
-
-import ‘./App.css’;
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
-
-render() {
-
-return (
-
-<div className=“App”>
-
-<header className=“App-header”>
-
-<img src={logo} className=“App-logo” alt=“logo” />
-
-<p>
-
-Edit <code>src/App.js</code> and save to reload.
-
-</p>
-
-<a
-
-className=“App-link”
-
-href=“https://reactjs.org”
-
-target=“_blank”
-
-rel=“noopener noreferrer”
-
->
-
-Learn React
-
-</a>
-
-</header>
-
-</div>
-
-);
-
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
 }
-
-}
-
 
 export default App;
+```
 
 
 Up at the first line of code we see the import statement:
 
-import React, { Component } from ‘react’;
+```
+import React, { Component } from 'react';
+```
 
 and at the last line we see the export default statement:
 
+```
 export default App;
+```
 
 To understand these statements, let’s discuss about modules syntax first.
 
 A module is simply a JavaScript file that exports one or more values (can be objects, functions or variables) using the export keyword. First, create a new file named util.js in the src directory
 
+```
 touch util.js
+```
 
 Then write a function inside it. This is a default export
 
+```
 export default function times(x) {
-
-return x * x;
-
+  return x * x;
 }
+```
 
 or multiple named exports
 
+```
 export function times(x) {
-
-return x * x;
-
+  return x * x;
 }
 
 export function plusTwo(number) {
-
-return number + 2;
-
+  return number + 2;
 }
+```
 
 
 Then we can import it from src/App.js
 
-import { times, plusTwo } from ‘./util.js’;
+```
+import { times, plusTwo } from './util.js';
 
 console.log(times(2));
-
 console.log(plusTwo(3));
+```
 
 
 You can have multiple named exports per module but only one default export. A default export can be imported without using the curly braces and corresponding exported function name:
 
+```
 // in util.js
-
 export default function times(x) {
-
-return x * x;
-
+  return x * x;
 }
 
 // in app.js
-
-import k from ‘./util.js’;
-
+import k from './util.js';
 
 console.log(k(4)); // returns 16
+```
 
 
 But for named exports, you must import using curly braces and the exact name. Alternatively, imports can use alias to avoid having the same name for two different imports:
 
+```
 // in util.js
-
 export function times(x) {
-
-return x * x;
-
+  return x * x;
 }
 
 export function plusTwo(number) {
-
-return number + 2;
-
+  return number + 2;
 }
 
-
 // in app.js
-
-import { times as multiplication, plusTwo as plus2 } from ‘./util.js’;
+import { times as multiplication, plusTwo as plus2 } from './util.js';
+```
 
 
 Import from absolute name like:
 
-import React from ‘react’;
+```
+import React from 'react';
+```
 
 Will make JavaScript check on node_modules for the corresponding package name. So if you’re importing a local file, don’t forget to use the right path.
 
@@ -522,29 +486,22 @@ Will make JavaScript check on node_modules for the corresponding package name. S
 ## Use in React
 Obviously we’ve seen this in the src/App.js file, and then in index.js file where the exported App component is being rendered. Let’s ignore the serviceWorker part for now.
 
+```
 //index.js file
 
-import React from ‘react’;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import ReactDOM from ‘react-dom’;
-
-import ‘./index.css’;
-
-import App from ‘./App’;
-
-import * as serviceWorker from ‘./serviceWorker’;
-
-
-ReactDOM.render(<App />, document.getElementById(‘root’));
-
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
-
 // unregister() to register() below. Note this comes with some pitfalls.
-
 // Learn more about service workers: http://bit.ly/CRA-PWA
-
 serviceWorker.unregister();
+```
 
 
 Notice how App is imported from ./App directory and the .js extension has been omitted. We can leave out file extension only when importing JavaScript files, but we have to include it on other files, such as .css. We also import another node module react-dom, which enables us to render React component into HTML element.
