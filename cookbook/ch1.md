@@ -56,28 +56,25 @@ If you never learned ES6 before, you’d think that this class statement is a fe
 ## ES6 Classes
 ES6 introduced class syntax that is used in similar ways to OO language like Java or Python. A basic class in ES6 would look like this:
 
+```
 class Developer {
+  constructor(name){
+    this.name = name;
+  }
 
-constructor(name){
-
-this.name = name;
-
+  hello(){
+    return 'Hello World! I am ' + this.name + ' and I am a web developer';
+  }
 }
-
-hello(){
-
-return ‘Hello World! I am ’ + this.name + ’ and I am a web developer’;
-
-}
-
-}
+```
 
 
 class syntax is followed by an identifier (or simply name) that can be used to create new objects. The constructor method is always called in object initialization. Any parameters passed into the object will be passed into the new object. For example:
 
-var nathan = new Developer(‘Nathan’);
-
+```
+var nathan = new Developer('Nathan');
 nathan.hello(); // Hello World! I am Nathan and I am a web developer
+```
 
 A class can define as many methods as the requirements needed, and in this case, we have the hello method which returns a string.
 
