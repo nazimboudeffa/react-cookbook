@@ -56,3 +56,5 @@ function App() {
 }
 ```
 
+useState is called a Hook
+
