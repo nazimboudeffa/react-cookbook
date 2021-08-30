@@ -22,12 +22,37 @@ function App() {
    <div>
     <h1>This is the counter</h1>
     <p> counter : {count}</p>
-    <button onClick={increment}>-</button>
-    <button onClick={decrement}>+</button>
+    <button onClick={decrement}>-</button>
+    <button onClick={increment}>+</button>
    </div>
    );
 }
 ```
 
 This code will not work in the React logic if you click + or - buttons why ? Because you have to use useState
+
+```
+import React, {useState} from 'react';
+
+function App() {
+  const [count, setCount] =useState(0);
+  
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count -1);
+  };
+  
+  return (
+   <div>
+    <h1>This is the counter</h1>
+    <p> counter : {count}</p>
+    <button onClick={decrement}>-</button>
+    <button onClick={increment}>+</button>
+   </div>
+   );
+}
+```
 
