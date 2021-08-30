@@ -1,4 +1,26 @@
-# useState Hook
+# React Hooks
+
+Ract has 10 builtin hooks :
+
+Basi Hooks 
+
+- useState
+- useeffect
+- useContext
+
+Additionnal Hooks
+
+- useReducer
+- useCallback
+- useDemo
+- userRef
+- useImperativeHandle
+- useLayoutEffect
+- useDebugValue
+
+We are going to see only two hooks in this chapter, useState and useEffect
+
+## useState Hook
 
 Don't ask your self what is a Hook a ctually just focus on the useStat wich is a sort of variable in React logic
 
