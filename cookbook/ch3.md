@@ -20,9 +20,11 @@ Additionnal Hooks
 
 We are going to see only two hooks in this chapter, useState and useEffect
 
+Don't ask your self what is a Hook actually just focus on the useState and useEffect which we going to understand with an example
+
 ## useState Hook
 
-Don't ask your self what is a Hook a ctually just focus on the useStat wich is a sort of variable in React logic
+useState is a sort of variable in the React logic, `useState()` returns an array which we're going to destructurate like we've seen in ch1 with two values, the variable and the setter
 
 Suppose you have this code :
 
