@@ -24,7 +24,7 @@ Don't ask your self what is a Hook actually just focus on the useState and useEf
 
 ## useState Hook
 
-useState is a sort of variable in the React logic, `useState()` returns an array which we're going to destructurate like we've seen in ch1 with two values, the variable and the setter
+useState is a sort of variable in the React logic, `useState()` returns an array which we're going to destructurate like we've seen in ch1 with two values, the a reactive value and a setter
 
 Suppose you have this code :
 
