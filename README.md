@@ -2,6 +2,8 @@
 
 You can find the draft by following [this link](https://docs.google.com/document/d/1oZOCx_5fOI8C4wVxzYKWb3NYGmH-sZ42t1qKz05tgmU/edit?usp=sharing)
 
+## The CookBook
+
 The original **React Cookbook** is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License][license]. You are free:
 
 * to Share—to copy, distribute and transmit the work
