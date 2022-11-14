@@ -1,6 +1,6 @@
 # React Cookbook (the original edition)
 
-You can find the draft by following [this link](https://docs.google.com/document/d/1oZOCx_5fOI8C4wVxzYKWb3NYGmH-sZ42t1qKz05tgmU/edit?usp=sharing)
+[DRAFT](https://docs.google.com/document/d/1oZOCx_5fOI8C4wVxzYKWb3NYGmH-sZ42t1qKz05tgmU/edit?usp=sharing)
 
 ## The CookBook
 
