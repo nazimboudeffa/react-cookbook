@@ -18,7 +18,7 @@ It’s the 20% of JavaScript features that you will use 80% of the time, so in t
 ## Exploring Create React App
 The usual case of starting to learn React is to run the create-react-app package, which sets up everything you need to run React. Then after the process is finished, opening src/app.js will present us with the only React class in the whole app:
 
-```
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
