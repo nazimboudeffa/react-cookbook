@@ -26,7 +26,7 @@ Yes, you can use the markdown source in this repository to make your own PDF. Or
 
 ### Great book! Can I still buy it?
 
-Not from me! Instead, [please fix a price](https://leanpub.com/reactcookbook).
+Not from me! Instead, please fix a price.
 
 ### I don't want to buy it, but I'd like to say "thank you" with a tip.
 
