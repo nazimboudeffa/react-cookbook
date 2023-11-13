@@ -14,10 +14,6 @@ The original **React Cookbook** is licensed under a [Creative Commons Attributio
 
 Read the [license](https://creativecommons.org/licenses/by-sa/3.0/deed.fr) yourself. The bottom line is, it’s free, *free*, **FREE**! And don’t just take my word for it, this repository contains the markdown source for the entire book.
 
-### The "First" Edition
-
-[pc1]: https://leanpub.com/reactcookbook
-
 ## q & a
 
 ### I don't want to pay to download a PDF. Can I make my own?
