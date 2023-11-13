@@ -1,6 +1,8 @@
 # React Cookbook (the original edition)
 
-[DRAFT](https://docs.google.com/document/d/1oZOCx_5fOI8C4wVxzYKWb3NYGmH-sZ42t1qKz05tgmU/edit?usp=sharing)
+This CookBook was created by taking notes from diffrent sources and the help of AI
+
+Main book can be found for $0+ on [nazimboudeffa.gumroad.com](https://nazimboudeffa.gumroad.com)
 
 ## The CookBook
 
